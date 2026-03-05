@@ -104,7 +104,7 @@
 
 将 `skills/` 目录下的各 skill 文件夹复制到 IDE/插件 的 skills 目录，例如：
 
-- **Cursor**：`.cursor/skills-cursor/` 或项目内 `.cursor/skills/`
+- **Cursor**：`C:/Users/xs/.cursor/skills/` 或项目内 `.cursor/skills/`
 - **Codex**：`$CODEX_HOME/skills/` 或 `skills/public/`
 
 ## 更多公开 Skills 资源
