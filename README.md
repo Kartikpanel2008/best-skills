@@ -4,6 +4,19 @@
 
 **与 [best-prompts](https://github.com/xstongxue/best-prompts) 的区别**：best-prompts 是面向聊天框的 Prompt，需手动复制粘贴；best-skills 是面向 Agent 的 SKILL.md，Agent 会根据 `description` 中的关键词与触发场景**自动判断是否调用**，无需每次手动选择。
 
+## 效果预览
+
+**答辩 PPT（[pptgen-drawio](skills/pptgen-drawio/SKILL.md)）** · 源文件：[paper-defense.drawio](preview/paper-defense.drawio) · [paper-defense.pptx](preview/paper-defense.pptx)
+
+<table><tr>
+<td><img src="preview/paper-defense1.jpg" alt="答辩PPT预览1"/></td>
+<td><img src="preview/paper-defense2.jpg" alt="答辩PPT预览2"/></td>
+</tr></table>
+
+**公众号封面（[wechat-article-writer](skills/wechat-article-writer/SKILL.md)）** · 源文件：[wechat_cover.drawio](preview/wechat_cover.drawio)
+
+![公众号封面预览](preview/wechat_cover.drawio.png)
+
 ## 本科&硕士学位论文
 
 
@@ -32,13 +45,13 @@
 ## 开发流程五步法
 
 
-| 步骤      | Skill        | 示例 Prompt                                  |
-| ------- | ------------ | ------------------------------------------ |
-| 需求理解    | dev-workflow | 「我想做一个 XXX，帮我整理需求」                         |
-| 方案设计    | dev-workflow | 「需求已整理好，帮我做技术方案」「架构设计：前后端分离」               |
-| 代码实现    | dev-workflow | 「按方案开始写代码」「实现用户登录模块」                       |
-| 代码审查    | dev-workflow | 「帮我审查这段代码」「PR review，按团队规范检查」              |
-| Bug 修复  | dev-workflow | 「这里报错了：xxx」「功能跑不通，帮我修」「测试挂了，看看怎么回事」        |
+| 步骤     | Skill        | 示例 Prompt                           |
+| ------ | ------------ | ----------------------------------- |
+| 需求理解   | dev-workflow | 「我想做一个 XXX，帮我整理需求」                  |
+| 方案设计   | dev-workflow | 「需求已整理好，帮我做技术方案」「架构设计：前后端分离」        |
+| 代码实现   | dev-workflow | 「按方案开始写代码」「实现用户登录模块」                |
+| 代码审查   | dev-workflow | 「帮我审查这段代码」「PR review，按团队规范检查」       |
+| Bug 修复 | dev-workflow | 「这里报错了：xxx」「功能跑不通，帮我修」「测试挂了，看看怎么回事」 |
 
 
 > **dev-workflow**：统一 Skill，根据用户表述自动匹配 requirement/design/implementation/review/bug-fix 五步之一。

@@ -51,6 +51,16 @@
 - 底部：全宽蓝色条（8 mm 高）
 - 色块不设圆角（`rounded=0`），硬朗、干净
 
+## 文字换行要点（重要）
+
+Draw.io 文字默认**不换行**，必须同时满足以下三条才能正常折行：
+
+1. **style 加 `whiteSpace=wrap`**：所有含文字的 cell 都必须加，缺一不可
+2. **容器高度要足够**：正文行高约 1.4 倍字号，多行文字需预留 `行数 × 字号 × 1.5` 的高度
+3. **不要用 `overflow=hidden`**：会裁掉溢出文字
+
+> 生成卡片正文时，高度建议：单行 ≈ 字号×2，两行 ≈ 字号×3.5，三行 ≈ 字号×5，宁可偏大不要偏小。
+
 ## Draw.io XML 关键样式片段
 
 ```xml
@@ -69,14 +79,14 @@
   <mxGeometry x="0" y="1050" width="1920" height="30" as="geometry"/>
 </mxCell>
 
-<!-- 页面标题 -->
-<mxCell id="ptitle" value="目录页" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=36;fontColor=#0170C1;fontFamily=方正尚酷简体;" vertex="1" parent="1">
-  <mxGeometry x="120" y="80" width="600" height="60" as="geometry"/>
+<!-- 页面标题（单行，高度=字号×2） -->
+<mxCell id="ptitle" value="目录页" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=36;fontColor=#0170C1;fontFamily=方正尚酷简体;" vertex="1" parent="1">
+  <mxGeometry x="120" y="80" width="600" height="72" as="geometry"/>
 </mxCell>
 
-<!-- 英文副标题 -->
-<mxCell id="en" value="CONTENTS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontColor=#000000;fontFamily=Garage Gothic;" vertex="1" parent="1">
-  <mxGeometry x="120" y="150" width="400" height="40" as="geometry"/>
+<!-- 英文副标题（单行） -->
+<mxCell id="en" value="CONTENTS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontColor=#000000;fontFamily=Garage Gothic;" vertex="1" parent="1">
+  <mxGeometry x="120" y="150" width="400" height="48" as="geometry"/>
 </mxCell>
 
 <!-- 封面底部全宽横条（封面页用） -->
@@ -84,8 +94,13 @@
   <mxGeometry x="0" y="1040" width="1920" height="40" as="geometry"/>
 </mxCell>
 
-<!-- 封面主标题 -->
-<mxCell id="ctitle" value="基于 XX 的系统设计与实现" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=48;fontColor=#000000;fontFamily=方正尚酷简体;" vertex="1" parent="1">
-  <mxGeometry x="120" y="340" width="1400" height="100" as="geometry"/>
+<!-- 封面主标题（可能折行，高度留足=字号×3） -->
+<mxCell id="ctitle" value="基于 XX 的系统设计与实现" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=48;fontColor=#000000;fontFamily=方正尚酷简体;" vertex="1" parent="1">
+  <mxGeometry x="120" y="340" width="1400" height="144" as="geometry"/>
+</mxCell>
+
+<!-- 卡片正文示例（三行以内，高度=字号×5） -->
+<mxCell id="cardtext" value="正文内容，支持自动换行，长文字会在容器宽度内折行显示。" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=18;fontColor=#333333;fontFamily=冬青黑体简体中文 W3;" vertex="1" parent="1">
+  <mxGeometry x="120" y="500" width="400" height="90" as="geometry"/>
 </mxCell>
 ```

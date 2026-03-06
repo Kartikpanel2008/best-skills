@@ -45,6 +45,16 @@
 - 小方块装饰（14 × 15 mm）：`fillColor=#2C5160`，用于侧边信息标注
 - 细节处使用 `#B7472A` 暖色系点缀，而非红色
 
+## 文字换行要点（重要）
+
+Draw.io 文字默认**不换行**，必须同时满足以下三条才能正常折行：
+
+1. **style 加 `whiteSpace=wrap`**：所有含文字的 cell 都必须加，缺一不可
+2. **容器高度要足够**：正文行高约 1.4 倍字号，多行文字需预留 `行数 × 字号 × 1.5` 的高度
+3. **不要用 `overflow=hidden`**：会裁掉溢出文字
+
+> 高度参考：单行 ≈ 字号×2，两行 ≈ 字号×3.5，三行 ≈ 字号×5，宁可偏大不要偏小。
+
 ## Draw.io XML 关键样式片段
 
 ```xml
@@ -53,23 +63,23 @@
   <mxGeometry x="1580" y="520" width="40" height="55" as="geometry"/>
 </mxCell>
 
-<!-- 封面主标题 -->
-<mxCell id="title" value="软件项目质量管理" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=44;fontColor=#2C5160;fontFamily=微软雅黑;" vertex="1" parent="1">
-  <mxGeometry x="120" y="300" width="1400" height="80" as="geometry"/>
+<!-- 封面主标题（可能折行，高度=字号×3） -->
+<mxCell id="title" value="软件项目质量管理" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=44;fontColor=#2C5160;fontFamily=微软雅黑;" vertex="1" parent="1">
+  <mxGeometry x="120" y="300" width="1400" height="132" as="geometry"/>
 </mxCell>
 
-<!-- 内容页章节标题（Arial，暖红色强调） -->
-<mxCell id="sec" value="1. 软件质量概述和控制" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=32;fontColor=#B7472A;fontFamily=Arial;" vertex="1" parent="1">
-  <mxGeometry x="120" y="160" width="1000" height="50" as="geometry"/>
+<!-- 内容页章节标题（单行，高度=字号×2） -->
+<mxCell id="sec" value="1. 软件质量概述和控制" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=32;fontColor=#B7472A;fontFamily=Arial;" vertex="1" parent="1">
+  <mxGeometry x="120" y="160" width="1400" height="64" as="geometry"/>
 </mxCell>
 
-<!-- 正文内容 -->
-<mxCell id="body" value="[正文内容...]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=22;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+<!-- 正文内容（多行，高度充裕，verticalAlign=top） -->
+<mxCell id="body" value="正文内容，支持自动换行显示。" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=22;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
   <mxGeometry x="120" y="240" width="1680" height="600" as="geometry"/>
 </mxCell>
 
-<!-- 汇报人信息行 -->
-<mxCell id="info" value="汇报人：xxx    院系：xxx    Date: 2024/01/01" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontColor=#2C5160;fontFamily=微软雅黑;" vertex="1" parent="1">
+<!-- 汇报人信息行（单行，高度=字号×2） -->
+<mxCell id="info" value="汇报人：xxx    院系：xxx    Date: 2024/01/01" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontColor=#2C5160;fontFamily=微软雅黑;" vertex="1" parent="1">
   <mxGeometry x="120" y="820" width="1400" height="40" as="geometry"/>
 </mxCell>
 ```

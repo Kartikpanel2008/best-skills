@@ -53,6 +53,16 @@
 - 小色块（约 8 × 7 mm）`fillColor=#F5C638`，作为内容页角标
 - 避免使用硬线条，倾向用色块/面来划分区域
 
+## 文字换行要点（重要）
+
+Draw.io 文字默认**不换行**，必须同时满足以下三条才能正常折行：
+
+1. **style 加 `whiteSpace=wrap`**：所有含文字的 cell 都必须加，缺一不可
+2. **容器高度要足够**：正文行高约 1.4 倍字号，多行文字需预留 `行数 × 字号 × 1.5` 的高度
+3. **不要用 `overflow=hidden`**：会裁掉溢出文字
+
+> 高度参考：单行 ≈ 字号×2，两行 ≈ 字号×3.5，三行 ≈ 字号×5，宁可偏大不要偏小。
+
 ## Draw.io XML 关键样式片段
 
 ```xml
@@ -61,14 +71,14 @@
   <mxGeometry x="0" y="0" width="1920" height="1080" as="geometry"/>
 </mxCell>
 
-<!-- 超大节号数字 -->
-<mxCell id="num" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=115;fontStyle=1;fontColor=#FFFFFF;fontFamily=微软雅黑;" vertex="1" parent="1">
-  <mxGeometry x="120" y="300" width="400" height="300" as="geometry"/>
+<!-- 超大节号数字（单行，高度=字号×2） -->
+<mxCell id="num" value="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=115;fontStyle=1;fontColor=#FFFFFF;fontFamily=微软雅黑;" vertex="1" parent="1">
+  <mxGeometry x="120" y="300" width="400" height="230" as="geometry"/>
 </mxCell>
 
-<!-- 节标题中文 -->
-<mxCell id="stitle" value="选题背景和意义" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=44;fontStyle=1;fontColor=#FFFFFF;fontFamily=微软雅黑;" vertex="1" parent="1">
-  <mxGeometry x="120" y="620" width="800" height="80" as="geometry"/>
+<!-- 节标题中文（单行，高度=字号×2） -->
+<mxCell id="stitle" value="选题背景和意义" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=44;fontStyle=1;fontColor=#FFFFFF;fontFamily=微软雅黑;" vertex="1" parent="1">
+  <mxGeometry x="120" y="620" width="1200" height="88" as="geometry"/>
 </mxCell>
 
 <!-- 黄色导航角标 -->
@@ -76,6 +86,13 @@
   <mxGeometry x="120" y="40" width="20" height="55" as="geometry"/>
 </mxCell>
 
-<!-- 目录条目示例 -->
-<!-- value="第一部分  |  选题背景和意义"，fontSize=28，fontFamily=微软雅黑 -->
+<!-- 目录条目（单行，高度=字号×2） -->
+<mxCell id="item" value="第一部分  |  选题背景和意义" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#231F20;fontFamily=微软雅黑;" vertex="1" parent="1">
+  <mxGeometry x="200" y="300" width="1400" height="56" as="geometry"/>
+</mxCell>
+
+<!-- 正文小字（多行，高度按行数×字号×1.5预留，verticalAlign=top） -->
+<mxCell id="body" value="正文说明内容，支持自动换行。" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#231F20;fontFamily=微软雅黑;" vertex="1" parent="1">
+  <mxGeometry x="200" y="500" width="1400" height="400" as="geometry"/>
+</mxCell>
 ```
